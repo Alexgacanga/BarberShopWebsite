@@ -19,19 +19,17 @@ import g14 from "../assets/g14.jpg";
 import g15 from "../assets/g15.jpg";
 import g16 from "../assets/g16.jpg";
 import { Phone, Mail, MessageSquare, MapPin } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 export const Homepage = () => {
   const images1 = [g1, g2, g3, g4, g5, g6, g7, g8];
   const images2 = [g9, g10, g11, g12, g13, g14, g15, g16];
 
-  const [bgLoaded, setBgLoaded] = useState(false);
-
   useEffect(() => {
     const img = new Image();
     img.src = bg1;
-    img.onload = () => setBgLoaded(true);
   }, []);
+
 
   return (
     <div>
@@ -40,13 +38,10 @@ export const Homepage = () => {
         id="home"
         className="bg-cover bg-center h-170 md:h-150 sm:h-140 lg:h-160 xl:h-190 2xl:h-220 items-center"
         style={{
-          backgroundImage: bgLoaded
-            ? `linear-gradient(135deg, rgba(0,0,0,0.8), rgba(0,0,0,0.3)), url(${bg1})`
-            : `linear-gradient(135deg, rgba(0,0,0,0.85), rgba(0,0,0,0.85))`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          transition: "background-image 0.5s ease-in-out",
-        }}
+        backgroundImage: `linear-gradient(135deg, rgba(0,0,0,0.8), rgba(0,0,0,0.3)), url(${bg1})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
       >
         <div className="flex-row">
           <div className="md:ml-15 lg:w-220 sm:pt-40 pt-50 md:pt-50 lg:pt-60 xl:pt-70 ml-10 md:w-160 sm:w-150 w-70">
