@@ -307,7 +307,7 @@ export const Homepage = () => {
                   href="tel:+8940220232"
                   className="text-gray-700 hover:text-indigo-600 transition-colors"
                 >
-                  +894 022 0232
+                  +254 110 882 711
                 </a>
               </div>
             </div>
